@@ -17,7 +17,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent text-black z-50 px-6 md:px-12 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full bg-transparent text-white z-50 px-6 md:px-12 py-4 flex justify-between items-center">
       {/* Logo */}
       <Link href="/" className="text-2xl font-bold tracking-widest">
         Asvag
@@ -44,16 +44,16 @@ export default function Navbar() {
           <User className="cursor-pointer w-5 h-5" />
         </div>
 
+      </div>
         {/* Language Button */}
         <Button
           variant="outline"
           size="sm"
-          className="rounded-full bg-white text-black hover:bg-gray-100"
+          className="hidden md:inline-flex rounded-full bg-white text-black hover:bg-gray-100"
           onClick={() => setLang(lang === "EN" ? "FR" : "EN")}
         >
           {lang}
         </Button>
-      </div>
 
       {/* Mobile Menu (separate component) */}
       <MobileMenu lang={lang} setLang={setLang} menuItems={menuItems} />
