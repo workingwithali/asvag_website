@@ -17,9 +17,9 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent text-white z-50 px-6 md:px-12 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full bg-yellow-600 text-black z-50 px-6 md:px-12 py-4 flex justify-between items-center">
       {/* Logo */}
-      <Link href="/" className="text-2xl font-bold tracking-widest">
+      <Link href="/" className="text-2xl font-bold">
         Asvag
       </Link>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
         </Button>
 
       {/* Mobile Menu (separate component) */}
-      <MobileMenu lang={lang} setLang={setLang} menuItems={menuItems} />
+      <MobileMenu  menuItems={menuItems} />
     </nav>
   )
 }
